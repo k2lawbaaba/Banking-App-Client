@@ -1,0 +1,42 @@
+.sp-input-testin {
+    width: 20rem;
+    border-radius: 0rem 2rem 2rem 0;
+    border: 0;
+    outline: none;
+    background-color: rgb(145, 97, 25);
+  
+    /* margin-right: 5p; */
+  }
+  .signup{
+    margin: auto 2rem;
+  }
+  .signup-error-message {
+    font-size: 10px;
+    color: red;
+    margin:0;
+  }
+  .signup-form  input{
+
+    margin: .3rem auto;
+  height: 1.5rem;
+  width: 25vw;
+  padding-left: 1rem;
+  }
+  .signup-btn {
+    display: inline;
+    width: 10rem;
+    height: 2rem;
+    border-radius: 2rem;
+    border: none;
+    margin: 1.5rem 6rem 0;
+    background-color: rgb(99, 207, 240);
+  
+    /* transition: 5000 */
+  }
+  .signup-btn:hover {
+    background-color: black;
+    border: none;
+    color: rgb(99, 207, 240);
+    transition: 0.2s;
+  }
+  

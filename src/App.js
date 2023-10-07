@@ -1,0 +1,39 @@
+import React from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import HomePage from "./Components/Homepages";
+import Dashboard from "./Components/Dashboard";
+import SignUp from "./Components/SignUp";
+import Login from "./Components/Login";
+import "./App.css";
+import { ApolloClient, InMemoryCache, ApolloProvider,createHttpLink} from '@apollo/client';
+
+const httpLink = createHttpLink({
+  uri: 'https://chartreuse-green-python-wrap.cyclic.app',
+});
+
+const client = new ApolloClient({
+  link: httpLink,
+  cache: new InMemoryCache(),
+  credentials:"include",
+  fetchOptions: {
+    mode: 'no-cors', // Set the fetch mode to 'no-cors'
+  },
+});
+function App() {
+  return (
+  <ApolloProvider client={client}>
+    <div className="App">
+    <Router>
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/Dashboard/" element={<Dashboard />} />
+          <Route path="/Signup" element={<SignUp />} />
+          <Route path="/Login" element={<Login />} />
+        </Routes>
+      </Router>
+    </div>
+    </ApolloProvider>
+  );
+}
+
+export default App;
