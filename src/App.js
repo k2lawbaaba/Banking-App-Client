@@ -8,7 +8,7 @@ import "./App.css";
 import { ApolloClient, InMemoryCache, ApolloProvider,createHttpLink} from '@apollo/client';
 
 const httpLink = createHttpLink({
-  uri: "https://banking-api-mcxq.onrender.com",
+  uri: "https://banking-api-mcxq.onrender.com/graphql",
 });
 
 const client = new ApolloClient({
