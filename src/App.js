@@ -8,7 +8,7 @@ import "./App.css";
 import { ApolloClient, InMemoryCache, ApolloProvider,createHttpLink} from '@apollo/client';
 
 const httpLink = createHttpLink({
-  uri: 'https://chartreuse-green-python-wrap.cyclic.app',
+  uri: "https://banking-api-mcxq.onrender.com",
 });
 
 const client = new ApolloClient({
