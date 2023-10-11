@@ -77,6 +77,7 @@ const Dashboard = () => {
       const token = jwtDecoder(userCookies);
       setUserData(token);
     }
+    else console.log("No cookie found")
   }, []);
 
   // varifying that the token exists

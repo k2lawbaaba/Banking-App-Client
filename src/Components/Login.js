@@ -41,7 +41,7 @@ const Login = () => {
                 password: values.Password
             }
            })
-           console.log(response);
+          //  console.log(response);
            if(response){
             if(response.data.Login.message === "Logged in successfully")
             {
