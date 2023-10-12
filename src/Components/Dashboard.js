@@ -15,7 +15,7 @@ import Table from "react-bootstrap/Table";
 import { useQuery, useLazyQuery, gql } from "@apollo/client";
 import Cookies from "js-cookie";
 import jwtDecoder from "jwt-decode";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useLocation } from "react-router-dom";
 
 // Query for the graphQl
 const GET_ACCOUNT = gql`
@@ -55,6 +55,8 @@ const LOGOUT = gql`
 
 const Dashboard = () => {
   let navigate = useNavigate();
+  let location = useLocation();
+
   const [userData, setUserData] = useState([]);
 
   let date = new Date().toLocaleDateString();
@@ -72,12 +74,11 @@ const Dashboard = () => {
     else if (tim < 18) setTime("Good Afternoon");
     else setTime("Good Evening");
 
-    let userCookies = Cookies.get("userToken");
+    let userCookies = location.state
     if (userCookies) {
       const token = jwtDecoder(userCookies);
       setUserData(token);
     }
-    else console.log("No cookie found")
   }, []);
 
   // varifying that the token exists
@@ -91,7 +92,7 @@ const Dashboard = () => {
   const { id, exp } = userData;
   const expirationTime = exp;
   const currentTime = Math.floor(Date.now() / 1000);
-
+  
   if (expirationTime < currentTime) {
     // Token has expired, redirect to homepage
 

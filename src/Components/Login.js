@@ -15,6 +15,7 @@ const LOGIN = gql`
 
 const Login = () => {
   const [warning, setWarning] = useState("");
+
     const [Login]= useMutation(LOGIN);
 
   const navigate = useNavigate();
@@ -41,16 +42,16 @@ const Login = () => {
                 password: values.Password
             }
            })
-          //  console.log(response);
-           if(response){
-            if(response.data.Login.message === "Logged in successfully")
+           let result = response.data.Login.message;
+           if(result){
+            if(result.length > 120)
             {
                 alert("Logged in successfully");
-                navigate("/Dashboard");
+                navigate("/Dashboard", {state: result});
                 setWarning("")
 
             }
-            else setWarning(response.data.Login.message )
+            else setWarning(result)
     
            }
            else{
@@ -58,7 +59,7 @@ const Login = () => {
            }
         } catch (error) {
           
-          console.log(error)
+           console.log(error);
         }
     },
   });
