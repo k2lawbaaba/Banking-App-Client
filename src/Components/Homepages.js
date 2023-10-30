@@ -14,13 +14,13 @@ const HomePage=()=>{
 
     return<div className="home-page">
     <div className="home-header">
-    <Navbar />
+    {/* <Navbar /> */}
         {/* <h1 className="welcome-text">Welcome to Abbay Bank Plc</h1>; */}
 
     </div>
     <div className="home-section">
         <div className="image-text">
-            <img src={require("../images/e-banking-2.jpeg")} alt="e-banking-image" id="home-image"/>
+            <img src={require("../images/e-banking-2.webp")} alt="e-banking-image" id="home-image"/>
             {/* <h3>A Bank just for you</h3> */}
         </div>
         <div className="home-action">

@@ -13,7 +13,6 @@ import Profile from "./Profile_info";
 import ChangePasswordAndPIN from "./Changepassword";
 import Table from "react-bootstrap/Table";
 import { useQuery, useLazyQuery, gql } from "@apollo/client";
-import Cookies from "js-cookie";
 import jwtDecoder from "jwt-decode";
 import { useNavigate, useLocation } from "react-router-dom";
 
@@ -58,7 +57,7 @@ const Dashboard = () => {
   let location = useLocation();
 
   const [userData, setUserData] = useState([]);
-
+ 
   let date = new Date().toLocaleDateString();
   const [time, setTime] = useState();
 
@@ -139,24 +138,24 @@ const Dashboard = () => {
     );
   }
   if (accountError || transactionError) {
-    {
-      return (
-        <div className="TimeOutPage">
-          <img
-            src={require("../images/419-status-code.png")}
-            alt="419 Timeout"
-          />
-          <button
-            onClick={() => {
-              navigate("/");
-            }}
-          >
-            Please log in again
-          </button>
-          <div></div>
-        </div>
-      );
-    }
+    return (
+      <div className="TimeOutPage">
+      <div>
+        <img
+          src={require("../images/session_exp.webp")}
+          alt="419 Timeout"
+        />
+      </div>
+        <button
+          onClick={() => {
+            navigate("/");
+          }}
+        >
+          Log in again
+        </button>
+    
+      </div>
+    );
   }
 
   const transacts = transactionData.Transaction;
@@ -193,6 +192,7 @@ const Dashboard = () => {
                 <NavDropdown.Item
                   onClick={() => {
                     logOut();
+                    console.log(location.state);
                     navigate("/");
                   }}
                   className="dashboard-dropwn"
@@ -293,7 +293,7 @@ const Dashboard = () => {
         </div>
         <div className="dashboard-display">
           <div className="inner-display">
-            <h5>{`Available Balance: NGN ${Balance}`}</h5>
+            <h5>{`Available Bal: ₦${Balance}`}</h5>
             <p>{date}</p>
           </div>
           <div className="main-display">

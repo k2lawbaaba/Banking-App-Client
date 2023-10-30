@@ -1,46 +1,39 @@
-
 .home-section {
-    display: flex;
-    flex-wrap: wrap;
-    /* width: 100%; */
-    margin:0 1rem;
-    gap:50;
-    /* border: 2px solid red; */
+  display: flex;
+  flex-wrap: wrap;
+  /* width: 100%; */
+  margin: 0 1rem;
+  gap: 20px;
+  /* border: 2px solid red; */
 }
-.image-text{
-    height: auto; 
-    /* margin-top: 2rem; */
+.image-text {
+  height: auto;
+  width: 100%;
+  /* margin-top: 2rem; */
 }
-.home-action{
-    margin-left:3rem;
-    /* border:1px solid ; */
-    height: auto;
-    /* border: 1px solid; */
-    /* max-width: 330px; */
-  /* padding: 8rem; */
-    /* width: 20rem; */
-    box-shadow: inset 0 0.5em .5em rgba(0, 0, 0.7, 0.115);
+.home-action {
+  margin-left: 3rem;
+  height: auto;
+  box-shadow: inset 0 0.5em 0.5em rgba(0, 0, 0.7, 0.115);
 }
-#home-image{
-    width:44rem;
-    height: 100%;
+#home-image {
+  width: 40rem;
+  height: 100%;
 }
-.home-header{
-    margin-bottom: 6rem;
+.home-header {
+  margin-bottom: 1rem;
 }
-.home-page{
-    height: 100%;
-    /* position: relative; */
-    overflow: hidden;
+.home-page {
+  height: 100%;
+  /* position: relative; */
+  overflow: hidden;
 }
-.home-create-acct{
-    padding-left: 3rem;
-    font-size: 1.2rem;
-    
+.home-create-acct {
+  padding-left: 3rem;
+  font-size: 1.2rem;
 }
-.home-create-acct2{
-    margin: 2rem auto;
-    padding-left: 2rem;
-    font-size: 1.2rem;
-
+.home-create-acct2 {
+  margin: 2rem auto;
+  padding-left: 2rem;
+  font-size: 1.2rem;
 }

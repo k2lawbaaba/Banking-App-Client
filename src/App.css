@@ -1,8 +1,187 @@
+body {
+  margin: 0;
+  padding: 0;
+  /* width: 100%; */
+  /* background-color: #ede9d3; */
+}
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  .home-section {
+    margin: auto 8%;
+    gap: 0px;
+  }
+  #home-image {
+    width: 100%;
+  }
+ 
+  .login-form, .login-form input, label,
+  .signup-form input {
+    width: 100%;
+  }
+.login-btn {
+  margin: auto 40%;
+}
+  .login-form input {
+    margin: 1rem auto;
+    height: 2rem;
+    padding-left: 1rem;
+  }
 
-    body {
-        
-        margin: 0;
-        padding: 0;
-        /* width: 100%; */
-        /* background-color: #ede9d3; */
-      }
+  .home-action {
+    margin-left: 0;
+    width: 100%;
+
+  }
+  .nb-links {
+    display: flex;
+    justify-content: space-evenly;
+    align-content: center;
+    /* gap: 10px; */
+  }
+  .nb-links button {
+    font-size: 0.8rem;
+    font-weight: 500;
+    height: 1.2rem;
+    width: 4rem;
+  }
+  .nb-content {
+    display: flex;
+    gap: 10px;
+    height: 9vh;
+  }
+  .signup {
+    margin-top: 1.5rem;
+  }
+  .signup-btn {
+    width: 8rem;
+    margin: 1.5rem 2rem 0;
+  }
+  .login{
+    padding-top: 3rem;
+  }
+  .dashboard-display {
+    width: 78%;
+  }
+  .db-content{
+    height: 78%;
+  }
+  .transfer, .deposit{
+    padding: 3rem 3rem;
+  }
+  .transfer div, .deposit form{
+    text-align: center;
+  }
+  .transfer input, .deposit input{
+    padding-left: 0rem;
+  }
+  #transfer-btn {
+    width: 6rem;
+    margin: 0.5rem 0rem 0;
+}
+.cp-password button, .cp-head h3  {
+
+  font-size: large;
+  font-weight: 500;
+}
+.cp-sec {
+  padding-left: 0; 
+}
+.cp-body{
+  padding: 1rem 4rem;
+}
+.cp-password {
+  flex-wrap: nowrap;
+  gap: 2rem;
+}
+.cp-btn{
+  margin: 1rem 2rem;
+  font-size: 15px;
+  height: 1.5rem;
+}
+
+
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+  .home-action {
+    margin-left: 0;
+    width: 100%;
+
+  }
+  .login-form, .login-form input, label,
+  .signup-form input {
+    width: 100%;
+  }
+  .dashboard-display {
+    width: 80%;
+  }
+  .transfer, .deposit{
+    padding: 3rem 3rem;
+  }
+  .transfer div, .deposit form{
+    text-align: center;
+  }
+  .transfer input, .deposit input{
+    padding-left: 0rem;
+  }
+  #transfer-btn {
+    width: 6rem;
+    margin: 0.5rem 0rem 0;
+}
+.login-btn {
+  margin: auto 40%;
+}
+.login-form input {
+ text-align: center;
+}
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+  .home-section {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 0px;
+  }
+  #home-image {
+    width: 100%;
+  }
+  .home-action {
+    margin-left: 0;
+    width: 100%;
+
+  }
+
+}
+
+/* Large devices (laptops/desktops, 992px a}p) */
+@media only screen and (min-width: 992px) {
+  .home-action {
+    margin-left: 0;
+    width: 60%;
+
+  }
+  #home-image {
+    width: 100%;
+  }
+  .login-form input {
+    text-align: left;
+   }
+   .dashboard-display {
+    width: 100%;
+  }
+}
+
+/* Extra large devices (large laptops and d}ops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+  /* .home-action {
+    margin-left: 0;
+    width: 60%;
+
+  }
+  #home-image {
+    width: 100%;
+  } */
+
+}

@@ -14,11 +14,13 @@ function Navbar() {
        
         
         <div className="nb-links">
-          <a className="linko" href="">
-            <p>Contact</p>
-          </a>
+          <div className="linko">
+          <Link to="Contact" className="linko">
+            <button>Contact</button>
+          </Link>
+          </div>
           <Link to="/" className="linko">
-            <p>About us</p>
+            <button>About us</button>
           </Link>
                   
           <div>

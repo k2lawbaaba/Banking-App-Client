@@ -13,7 +13,9 @@ import { ApolloClient, InMemoryCache, ApolloProvider,createHttpLink} from '@apol
 // });
 
 const client = new ApolloClient({
-  uri: "https://banking-api-mcxq.onrender.com/graphql",
+  uri: "http://localhost:4004/graphql",
+
+  // uri: "https://banking-api-mcxq.onrender.com/graphql",
   cache: new InMemoryCache(),
   credentials:"include",
 
