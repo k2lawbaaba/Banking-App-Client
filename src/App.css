@@ -17,9 +17,10 @@ body {
   .login-form, .login-form input, label,
   .signup-form input {
     width: 100%;
+    text-align: justify;
   }
 .login-btn {
-  margin: auto 40%;
+  margin: auto 35%;
 }
   .login-form input {
     margin: 1rem auto;
