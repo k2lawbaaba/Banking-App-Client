@@ -63,7 +63,7 @@ function ProfileInfo(props) {
           </tr>
           <tr>
             <td className="profileCells">BVN</td>
-            <td>{AccountNumber + Phone}</td>
+            <td>{'00' + Phone}</td>
           </tr>
         </tbody>
       </Table>

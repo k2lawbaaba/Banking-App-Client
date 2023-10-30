@@ -98,7 +98,9 @@ body {
   font-size: 15px;
   height: 1.5rem;
 }
-
+.pi-body{
+  padding: 1rem 1rem;
+}
 
 }
 
