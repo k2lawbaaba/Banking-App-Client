@@ -74,6 +74,7 @@ body {
   }
   .transfer input, .deposit input{
     padding-left: 0rem;
+    width: 100%;
   }
   #transfer-btn {
     width: 6rem;
@@ -173,6 +174,10 @@ body {
    }
    .dashboard-display {
     width: 100%;
+  }
+  .displayAccount-details {
+    margin: 0.3rem 20rem;
+    
   }
 }
 

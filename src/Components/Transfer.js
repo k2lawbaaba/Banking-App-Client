@@ -89,7 +89,7 @@ const Transfer = (prop) => {
           },
         });
         if (transferred) {
-          if (transferred.data.Transfer.message.includes("NGN")) {
+          if (transferred.data.Transfer.message.includes("₦")) {
             alert(transferred.data.Transfer.message);
 
             resetForm();
@@ -105,7 +105,7 @@ const Transfer = (prop) => {
       {details && data && (
         <div className="displayAccount-details">
           {data.GetReceiverAccount !== null ? (
-            <div>
+            <div className="user-details">
               <p>{data.GetReceiverAccount.name}</p>
               <p>
                 {data.GetReceiverAccount.AccountNumber}

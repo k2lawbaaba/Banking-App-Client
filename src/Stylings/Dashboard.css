@@ -65,7 +65,8 @@
 .transfer,
 .deposit {
   height: 73vh;
-  padding: 3rem 23rem;
+  /* padding: 3rem 23rem; */
+  text-align: center;
 }
 input[type="number"]::-webkit-inner-spin-button,
 input[type="number"]::-webkit-outer-spin-button {
