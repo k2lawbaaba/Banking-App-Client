@@ -61,9 +61,16 @@ const Dashboard = () => {
 
   const [userData, setUserData] = useState([]);
   const [show, setShow] = useState(false);
+  const [showBal, setShowBal] = useState(false);
+
+
 
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
+  const handleShowBal=()=> setShowBal(true);
+  const handleHideBal=()=> setShowBal(false);
+
+
  
   let date = new Date().toLocaleDateString();
   const [time, setTime] = useState();
@@ -319,7 +326,15 @@ const Dashboard = () => {
           {/* <a>Sign Out</a> */}
         <div className="dashboard-display">
           <div className="inner-display">
-            <h5>{`Available Bal: ₦${Balance}`}</h5>
+          <div>
+
+          {!showBal ?
+          <button onClick={handleShowBal}><h5>Balance</h5> <img src={require('../images/eye-icons.png')} alt=""/></button>
+          :
+          <button onClick={handleHideBal}><h5>Balance</h5> <img src={require('../images/icons8-invisible.png')} alt=""/></button>
+          }
+            <h4>{showBal && `₦${Balance}`}</h4>
+          </div>
             <p>{date}</p>
           </div>
           <div className="main-display">
