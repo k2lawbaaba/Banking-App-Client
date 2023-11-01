@@ -3,6 +3,9 @@ import Container from "react-bootstrap/Container";
 import Navbar from "react-bootstrap/Navbar";
 import NavDropdown from "react-bootstrap/NavDropdown";
 import Dropdown from "react-bootstrap/Dropdown";
+import Alert from 'react-bootstrap/Alert';
+import Button from 'react-bootstrap/Button';
+import Offcanvas from 'react-bootstrap/Offcanvas';
 import "../Stylings/Dashboard.css";
 import Transfer from "./Transfer";
 import Deposit from "./Deposit";
@@ -57,6 +60,10 @@ const Dashboard = () => {
   let location = useLocation();
 
   const [userData, setUserData] = useState([]);
+  const [show, setShow] = useState(false);
+
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
  
   let date = new Date().toLocaleDateString();
   const [time, setTime] = useState();
@@ -205,7 +212,25 @@ const Dashboard = () => {
         </Navbar>
       </nav>
       <div className="dashboard-main">
-        <div className="dashboard-actions">
+        <div className="dashboard-action">
+        <Button variant="Secondary" className="d-lg-none" onClick={handleShow}>
+        <img src={require('../images/open_menu_icon.png')} alt="openmenu"/>
+      </Button>
+
+      {/* <Alert variant="info" className="d-none d-lg-block">
+        Resize your browser to show the responsive offcanvas toggle.
+      </Alert> */}
+
+      <Offcanvas show={show} onHide={handleClose} responsive="lg" className="canvass">
+        <Offcanvas.Header closeButton>
+          <Offcanvas.Title>{" "}</Offcanvas.Title>
+        </Offcanvas.Header>
+        <Offcanvas.Body className="dashboard-actions">
+          {/* <p className="mb-0">
+            This is content within an <code>.offcanvas-lg</code>.
+          </p> */}
+          
+       
           <a
             onClick={() => {
               handleComponentSwitch(<Transfer id={id} />);
@@ -288,9 +313,10 @@ const Dashboard = () => {
               </Dropdown.Menu>
             </Dropdown>
           </div>
-
-          {/* <a>Sign Out</a> */}
+          </Offcanvas.Body>
+      </Offcanvas>
         </div>
+          {/* <a>Sign Out</a> */}
         <div className="dashboard-display">
           <div className="inner-display">
             <h5>{`Available Bal: ₦${Balance}`}</h5>

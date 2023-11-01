@@ -61,7 +61,7 @@ body {
     padding-top: 3rem;
   }
   .dashboard-display {
-    width: 78%;
+    width: 89%;
   }
   .db-content{
     height: 78%;
@@ -103,7 +103,28 @@ body {
 .pi-body{
   padding: 1rem 1rem;
 }
-
+.dashboard-action {
+  width: 3rem;
+  
+}
+.canvass{
+  width: 9rem !important;
+  display: flex;
+  flex-direction: column;
+  height: auto !important;
+  margin-top: 3.5rem;
+}
+.dashboard-actions {
+  background-color:inherit;
+  box-shadow: none;
+  width: 8rem;
+  padding: 0 auto 1rem;
+  height: auto;
+}
+.profile {
+  padding: 0.2rem !important;
+  /* height: 1rem !important;  */
+}
 }
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
@@ -139,6 +160,31 @@ body {
 .login-form input {
  text-align: center;
 }
+.canvass{
+  width: 9rem !important;
+  display: flex;
+  flex-direction: column;
+  height: auto !important;
+  margin-top: 3.5rem;
+}
+.dashboard-actions {
+  background-color:inherit;
+  box-shadow: none;
+  width: 8rem;
+  padding: 0 auto 1rem;
+  height: auto;
+}
+.profile {
+  padding: 0.2rem !important;
+  /* height: 1rem !important;  */
+}
+.dashboard-action {
+  width: 4rem;
+  
+}
+.dashboard-display {
+  width: 95%;
+}
 }
 
 /* Medium devices (landscape tablets, 768px and up) */
@@ -155,6 +201,10 @@ body {
     margin-left: 0;
     width: 100%;
 
+  }
+  .dashboard-action {
+    width: 4rem;
+    
   }
 
 }
@@ -178,6 +228,15 @@ body {
   .displayAccount-details {
     margin: 0.3rem 20rem;
     
+  }
+  .dashboard-action {
+    background-color: rgb(228, 230, 231);
+    box-shadow: inset 0 0.5em 0.5em rgba(0, 0, 0.7, 0.115);
+    display: flex;
+    width: 15rem;
+    flex-direction: column;
+    padding: 0.2rem auto 1rem;
+    height: auto;
   }
 }
 

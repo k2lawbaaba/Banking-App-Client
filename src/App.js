@@ -5,7 +5,7 @@ import Dashboard from "./Components/Dashboard";
 import SignUp from "./Components/SignUp";
 import Login from "./Components/Login";
 import "./App.css";
-import { ApolloClient, InMemoryCache, ApolloProvider,createHttpLink} from '@apollo/client';
+import { ApolloClient, InMemoryCache, ApolloProvider} from '@apollo/client';
 
 // const httpLink = createHttpLink({
 //   // uri: "https://banking-api-mcxq.onrender.com/graphql",
@@ -13,9 +13,9 @@ import { ApolloClient, InMemoryCache, ApolloProvider,createHttpLink} from '@apol
 // });
 
 const client = new ApolloClient({
-  // uri: "http://localhost:4004/graphql",
+  uri: "http://localhost:4004/graphql",
 
-  uri: "https://banking-api-mcxq.onrender.com/graphql",
+  // uri: "https://banking-api-mcxq.onrender.com/graphql",
   cache: new InMemoryCache(),
   credentials:"include",
 
