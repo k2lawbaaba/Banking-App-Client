@@ -58,7 +58,6 @@ const Login = () => {
             alert("Failed to log in. Try Again later")
            }
         } catch (error) {
-          
            console.log(error);
         }
     },

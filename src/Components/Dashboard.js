@@ -333,7 +333,7 @@ const Dashboard = () => {
           :
           <button onClick={handleHideBal}><h5>Balance</h5> <img src={require('../images/icons8-invisible.png')} alt=""/></button>
           }
-            <h4>{showBal && `₦${Balance}`}</h4>
+            <h4>{showBal && `₦${Number(Balance).toLocaleString()}`}</h4>
           </div>
             <p>{date}</p>
           </div>
