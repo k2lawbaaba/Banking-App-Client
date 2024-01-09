@@ -376,8 +376,8 @@ const Dashboard = () => {
                               {" "}
                               {trans.typeOfTransaction == "DEPOSIT" ||
                               trans.receiverAccount == AccountNumber
-                                ? `+${trans.Amount}`
-                                : `-${trans.Amount}`}
+                                ? `+${Number(trans.Amount).toLocaleString()}`
+                                : `-${Number(trans.Amount).toLocaleString()}`}
                             </td>
                             <td>
                               {trans.typeOfTransaction === "TRANSFER"

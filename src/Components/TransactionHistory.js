@@ -38,8 +38,8 @@ function Transaction(prop) {
                     >
                       {trans.typeOfTransaction === "DEPOSIT" ||
                       trans.receiverAccount === accountNo
-                        ? `+${trans.Amount}`
-                        : `-${trans.Amount}`}
+                        ? `+${Number(trans.Amount).toLocaleString()}`
+                        : `-${Number(trans.Amount).toLocaleString()}`}
                     </td>
                     <td>{trans.account}</td>
                     <td>
